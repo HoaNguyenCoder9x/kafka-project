@@ -1,4 +1,5 @@
-confluent_kafka
-pymongo
-python-dotenv
-configparser
+configparser==7.1.0
+confluent-kafka==2.6.1
+dnspython==2.7.0
+pymongo==4.10.1
+python-dotenv==1.0.1

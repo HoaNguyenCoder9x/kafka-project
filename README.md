@@ -12,5 +12,9 @@ The project main flow
 2. Kafka server setup on docker
 3. MongoDB server setup on docker
 
+## File preparation
+
+1. add .env file located in config folder for sensitive information or replace the field with value = 0 in setting.ini
+
 
 
