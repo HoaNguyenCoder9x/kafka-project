@@ -12,6 +12,16 @@ def kafka_pipeline():
 
 if __name__ == "__main__":
     # Thêm thư mục gốc của project vào sys.path
-    sys.path.append(str(Path(__file__).resolve().parent / "src"))
-    threading.Thread(target=kafka_pipeline).start()
-    threading.Thread(target=consume_to_mongodb).start()
+    # sys.path.append(str(Path(__file__).resolve().parent / "src"))
+
+
+    project_root = Path(__file__).absolute().parent
+    print(f'project_root: {project_root}')
+
+    if project_root not in sys.path:
+        sys.path.insert(0, project_root)
+        threading.Thread(target=kafka_pipeline).start()
+        threading.Thread(target=consume_to_mongodb).start()
+
+
+    
